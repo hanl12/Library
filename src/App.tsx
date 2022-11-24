@@ -1,7 +1,7 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import { Google, Home } from './pages'
+import { Google, Home, MovieDb } from './pages'
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="google" element={<Google />} />
+        <Route path="moviedb" element={<MovieDb />} />
       </Routes>
     </BrowserRouter>
   )

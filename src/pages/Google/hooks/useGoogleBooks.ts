@@ -2,11 +2,12 @@ import React from "react";
 import { useGetData } from "../../../hooks";
 
 export function useGoogleBooks() {
-  const { getData, books } = useGetData();
+  const { getData, books, loading } = useGetData();
+  const [search, setSearch] = React.useState("a");
 
   React.useEffect(() => {
-    getData("xd", "google");
-  }, []);
+    getData(search, "google");
+  }, [search]);
 
-  return { books };
+  return { books, setSearch, loading };
 }
